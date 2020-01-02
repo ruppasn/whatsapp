@@ -80,10 +80,10 @@ export default function FullWidthTabs({ chats, status, calls }) {
         <Chats chats={chats} />
       </TabPanel>
       <TabPanel value={value} index={1} dir={theme.direction}>
-      <Status status={status} />
+        <Status status={status} />
       </TabPanel>
       <TabPanel value={value} index={2} dir={theme.direction}>
-      <Calls calls={calls} />
+        <Calls calls={calls} />
       </TabPanel>
     </div>
   );

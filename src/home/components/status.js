@@ -6,7 +6,7 @@ import StatusItem from './statusItem'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    maxWidth: 500,
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
@@ -24,7 +24,7 @@ export default ({status}) => {
     <List className={classes.root}>
     {
       status && status.map(statusOne => {
-        return <StatusItem status={statusOne} classes={classes} />
+        return <StatusItem status={statusOne} classes={classes} key={statusOne.name} />
       })
     }
     </List>

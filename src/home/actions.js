@@ -1,5 +1,5 @@
-import { CHATS, STATUS, CALLS } from "./types";
-import { getChats, getStatus, getCalls } from "./api";
+import { CHATS, STATUS, CALLS } from "./actionTypes";
+import { getChats, getStatus, getCalls } from "./restApi";
 
 export function getChatInfo() {
     return (dispatch) => {

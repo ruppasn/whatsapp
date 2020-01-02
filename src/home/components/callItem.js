@@ -5,6 +5,8 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
+import CallIcon from '@material-ui/icons/Call';
+import DuoIcon from '@material-ui/icons/Duo';
 
 export default ({ call, classes }) => {
     return <React.Fragment key={call.name}>
@@ -19,15 +21,17 @@ export default ({ call, classes }) => {
                       <Typography
                         component="span"
                         variant="body2"
-                        className={classes.inline}
+                        className={classes.floatRight}
                         color="textPrimary"
                       >
-                        {call.lastMessage}
+                      {call.type === 'call' && <CallIcon/>}
+                      {call.type !== 'call' && <DuoIcon/>}
+                        
                       </Typography>
                       <Typography
                         component="span"
                         variant="body2"
-                        className={classes.floatRight}
+                        className={classes.inline}
                         color="textPrimary"
                       >
                         {call.dateTime}

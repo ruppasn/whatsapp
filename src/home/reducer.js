@@ -1,4 +1,4 @@
-import { CHATS, STATUS, CALLS, ERROR } from "./types";
+import { CHATS, STATUS, CALLS, ERROR } from "./actionTypes";
 
 const initialState = {
     chats: [],

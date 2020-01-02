@@ -6,7 +6,7 @@ import CallsItem from './callItem'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    maxWidth: 500,
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
@@ -24,7 +24,7 @@ export default ({calls}) => {
     <List className={classes.root}>
     {
       calls && calls.map(call => {
-        return <CallsItem call={call} classes={classes} />
+        return <CallsItem call={call} classes={classes} key={call.name} />
       })
     }
     </List>

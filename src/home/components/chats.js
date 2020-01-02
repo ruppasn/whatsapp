@@ -6,7 +6,7 @@ import ChatItem from './chatItem'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    maxWidth: 500,
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
@@ -24,7 +24,7 @@ export default ({chats}) => {
     <List className={classes.root}>
     {
       chats && chats.map(chat => {
-        return <ChatItem chat={chat} classes={classes} />
+        return <ChatItem chat={chat} classes={classes} key={chat.name}/>
       })
     }
     </List>

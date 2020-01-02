@@ -1,12 +1,17 @@
 
-commands:
-npx create-react-app whatsapp
-cd whatsapp/
-yarn start
-yarn add react-redux react-router redux-thunk
-remove default content in App.js and write routers wrapped in provider
-yarn add json-server -- to create mock rest api calls
+###Initial Commands:
 
+npx create-react-app whatsapp
+
+cd whatsapp/
+
+yarn start
+
+yarn add react-redux react-router redux-thunk
+
+remove default content in App.js and write routers wrapped in provider
+
+yarn add json-server -- to create mock rest api calls
 
 
 
