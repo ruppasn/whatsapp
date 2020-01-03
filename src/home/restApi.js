@@ -15,3 +15,8 @@ export const getStatus = () => {
 export const getCalls = () => {
     return restClient.get(CALLS_URL)
 }
+
+export const getActiveTabData = (activeTabName) => {
+    console.log('active tab get data')
+    return restClient.get(activeTabName)
+}

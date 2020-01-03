@@ -1,21 +1,25 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
-import { getChatInfo, getCallsInfo, getStatusInfo } from './actions'
+import { getChatInfo, getCallsInfo, getStatusInfo, getTabData } from './actions'
 import Tabs from './components/tabs'
 
 const Chats = props => {
 
-    const { getChatInfo, getCallsInfo, getStatusInfo } = props
+    const { getChatInfo, getCallsInfo, getStatusInfo, getTabData } = props
+    const activeTabName = (props.location.pathname && props.location.pathname.split('/')[1]) || 'chats'
 
     useEffect(() => {
-        getChatInfo();
-        getCallsInfo();
-        getStatusInfo();
-    }, [getChatInfo, getCallsInfo, getStatusInfo])
+        // getChatInfo();
+        // getCallsInfo();
+        // getStatusInfo();
+        console.log('in compo',activeTabName);
+        
+        getTabData(activeTabName)
+    }, [getChatInfo, getCallsInfo, getStatusInfo, getTabData, activeTabName])
 
     return (
         <div>
-            <Tabs {...props} />
+            <Tabs {...props} activeTabName={activeTabName}/>
         </div>
     )
 }
@@ -29,7 +33,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
     getChatInfo,
     getCallsInfo,
-    getStatusInfo
+    getStatusInfo,
+    getTabData
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chats)
