@@ -1,22 +1,17 @@
-import restClient from "../restClient";
+import graphQLClient from '../graphQL/graphQLClient'
+import { GET_CHATS, GET_STATUS, GET_CALLS } from "../graphQL/graphQLQueries";
 
-const CHATS_URL = 'chats'
-const STATUS_URL = 'status'
-const CALLS_URL = 'calls'
-
-export const getChats = () => {
-    return restClient.get(CHATS_URL)
+const callQueryMap = {
+    calls: GET_CALLS,
+    chats: GET_CHATS,
+    status: GET_STATUS
 }
 
-export const getStatus = () => {
-    return restClient.get(STATUS_URL)
-}
-
-export const getCalls = () => {
-    return restClient.get(CALLS_URL)
+const getGraphQLData = (queryType) => {
+    return graphQLClient.query({ query: callQueryMap[queryType] })
 }
 
 export const getActiveTabData = (activeTabName) => {
-    console.log('active tab get data')
-    return restClient.get(activeTabName)
+    return getGraphQLData(activeTabName)
+
 }

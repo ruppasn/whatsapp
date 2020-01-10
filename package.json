@@ -8,7 +8,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "apollo-boost": "^0.4.7",
+    "apollo-server-express": "^2.9.15",
     "axios": "^0.19.0",
+    "graphql-tools": "^4.0.6",
     "json-server": "^0.15.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -21,6 +24,7 @@
   },
   "scripts": {
     "mockapi": "json-server --watch src/mockapi.json --port 4000",
+    "graphQLServer": "node src/graphQLServer.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

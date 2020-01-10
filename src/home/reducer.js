@@ -1,4 +1,4 @@
-import { CHATS, STATUS, CALLS, ERROR, ACTIVE_TAB_DATA } from "./actionTypes";
+import { ERROR, ACTIVE_TAB_DATA } from "./actionTypes";
 
 const initialState = {
     chats: [],
@@ -9,21 +9,7 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
 
     switch (type) {
-        case CHATS:
-            return {
-                ...state,
-                chats: payload.data
-            }
-        case CALLS:
-            return {
-                ...state,
-                calls: payload.data
-            }
-        case STATUS:
-            return {
-                ...state,
-                status: payload.data
-            }
+        
         case ERROR:
             return {
                 ...state,
@@ -33,7 +19,7 @@ export default (state = initialState, { type, payload }) => {
             console.log('in reducer',payload)
             return {
                 ...state,
-                [payload.activeTabName]: payload.data.data
+                [payload.activeTabName]: payload.data.data[payload.activeTabName]
             }
 
         default:

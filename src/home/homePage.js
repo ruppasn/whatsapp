@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
-import { getChatInfo, getCallsInfo, getStatusInfo, getTabData } from './actions'
+import { getTabData } from './actions'
 import Tabs from './components/tabs'
 
 const Chats = props => {
@@ -31,9 +31,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-    getChatInfo,
-    getCallsInfo,
-    getStatusInfo,
     getTabData
 }
 

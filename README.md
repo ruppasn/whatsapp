@@ -13,6 +13,7 @@ remove default content in App.js and write routers wrapped in provider
 
 yarn add json-server -- to create mock rest api calls
 
+Use graphql-tools and  apollo-server-express to integrate graphql server.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
