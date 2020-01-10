@@ -1,14 +1,13 @@
-
 ### Start application
-yarn  -- install dependencies
-yarn mockapi  -- to start mock rest api on localhost:4000 port
+
+yarn -- install dependencies
+yarn mockapi -- to start mock rest api on localhost:4000 port
 yarn graphQLServer -- -- to start graphQL server on localhost:4000 port (currently using in this project)
 yarn start -- start react application
 
-
 ### Dependencies used
 
-graphql-tools and  apollo-server-express to integrate graphql server.
+graphql-tools and apollo-server-express to integrate graphql server.
 apollo-boost as graphql client.
 yarn add json-server -- to create mock rest api calls
 
@@ -24,8 +23,7 @@ yarn add react-redux react-router redux-thunk
 
 remove default content in App.js and write routers wrapped in provider
 
--------------------------------------------
-
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
