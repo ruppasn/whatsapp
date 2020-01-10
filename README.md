@@ -1,15 +1,27 @@
 ### Start application
 
 yarn -- install dependencies
+
+
 yarn mockapi -- to start mock rest api on localhost:4000 port
+
+
 yarn graphQLServer -- -- to start graphQL server on localhost:4000 port (currently using in this project)
+
+
 yarn start -- start react application
+
 
 ### Dependencies used
 
 graphql-tools and apollo-server-express to integrate graphql server.
+
+
 apollo-boost as graphql client.
+
+
 yarn add json-server -- to create mock rest api calls
+
 
 ### Initial Project setup Commands:
 
